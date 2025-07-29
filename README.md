@@ -151,6 +151,8 @@ PRIVATE_KEY=your_private_key_here
 ⚠️ The account from PRIVATE_KEY will be the admin of the contract.
 This same private key should be imported into MetaMask to connect as admin in the frontend.
 
+> ⚠️  Run All In Ubuntu, VS Code (wsl)
+
 ## Smart Contract Setup & Deployment
 1. Install dependencies
 ```bash
