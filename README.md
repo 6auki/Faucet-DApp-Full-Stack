@@ -198,3 +198,7 @@ npm run dev
  - NFT-based access control
  - Role-based admin delegation
  - Usage dashboard
+
+
+License
+MIT
