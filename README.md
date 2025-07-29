@@ -15,16 +15,16 @@ A responsive frontend provides user and admin functionality.
 ## Project Structure
 ```yaml
 faucet-project/
-├── contracts/ # Solidity smart contract
-│ └── Faucet.sol
-│ └── MockERC20.sol
-├── test/ # Unit tests
-├── frontend/ # React frontend
-│ ├── app/
-│ ├── components/
-│ └── lib/
-├── scripts/ # Deployment scripts
-├── hardhat.config.ts # Hardhat configuration
+├── contracts/
+│   ├── Faucet.sol         # Main smart contract
+│   └── MockERC20.sol      # Mock ERC20 token for testing
+├── test/                  # Smart contract unit tests
+├── frontend/
+│   ├── app/               # Next.js application
+│   ├── components/        # Reusable React components
+│   └── lib/               # Wagmi/RainbowKit setup
+├── scripts/               # Deployment scripts
+├── hardhat.config.ts      # Hardhat config
 ```
 
 ---
@@ -72,6 +72,13 @@ Built with Wagmi, RainbowKit, and TailwindCSS, the frontend offers an interactiv
 - RainbowKit
 - TailwindCSS
 
+### Fontend Workflow
+- Connect wallet (MetaMask, RainbowKit)
+- Request faucet funds
+- Send tips with real-time refund tracking
+- View transaction history
+- Admin panel for pausing, blacklisting, and configuration
+
 ### Functionality
 
 - **Users**
@@ -116,13 +123,6 @@ Built with Wagmi, RainbowKit, and TailwindCSS, the frontend offers an interactiv
 npx hardhat run scripts/deploy.ts --network goerli
 ```
 
-Example admin actions
-```solidity
-faucet.setPerTransactionLimit(0.05 ether);
-faucet.setCoolDown(5 minutes);
-faucet.pause();
-faucet.addToBlacklist(0x123...);
-```
 ## Technologies
 
 | Layer      | Tools                                             |
@@ -191,6 +191,25 @@ npm install
 2. Run the frontend
 ```bash
 npm run dev
+```
+> The main frontend entry point is app/modernfaucetapp.tsx.
+Make sure your admin MetaMask account matches the PRIVATE_KEY used in the backend.
+Admin Instructions
+After deployment, the account from .env → PRIVATE_KEY becomes the admin.
+As admin, you can:
+- Pause or unpause the contract
+- Blacklist/unblacklist abusive users
+- Adjust withdrawal and cooldown settings
+- Withdraw remaining ETH
+- Recover stuck ERC20 tokens
+- Transfer ownership
+
+Example admin actions
+```solidity
+faucet.setPerTransactionLimit(0.05 ether);
+faucet.setCoolDown(5 minutes);
+faucet.pause();
+faucet.addToBlacklist(0x123...);
 ```
 
 ---
