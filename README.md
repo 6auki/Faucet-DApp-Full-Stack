@@ -12,6 +12,8 @@ Admins can pause the contract, blacklist abusive addresses, adjust limits, and r
 Users are able to see the transaction history (tip/withdraw, time, amount, pending/completed/failed, seeing tx on etherscan)
 A responsive frontend provides user and admin functionality.
 
+> Images of frontend are also attached in folder "images"
+
 ## Project Structure
 ```yaml
 faucet-project/
@@ -24,7 +26,7 @@ faucet-project/
 │   ├── components/        # Reusable React components
 │   └── lib/               # Wagmi/RainbowKit setup
 ├── scripts/               # Deployment scripts
-├── hardhat.config.ts      # Hardhat config
+├── images
 ```
 
 ---
