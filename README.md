@@ -225,9 +225,9 @@ faucet.addToBlacklist(0x123...);
  - Usage dashboard
 
 ## Project Front
-![Alt text](images/1.png)
-![Alt text](images/2.png)
-![Alt text](images/3.png)
+![Top Page, Information](images/1.png)
+![Withdraw/Receive](images/2.png)
+![Transactions List](images/3.png)
 
 ## License
 MIT
