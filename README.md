@@ -14,6 +14,8 @@ A responsive frontend provides user and admin functionality.
 
 > Images of frontend are also attached in folder "images"
 
+## Images of frontend is AT THE BOTTOM!
+
 ## Project Structure
 ```yaml
 faucet-project/
@@ -28,10 +30,6 @@ faucet-project/
 ├── scripts/               # Deployment scripts
 ├── images
 ```
-## Project Front
-![Alt text](images/1.png)
-![Alt text](images/2.png)
-![Alt text](images/3.png)
 
 ---
 
@@ -226,6 +224,10 @@ faucet.addToBlacklist(0x123...);
  - Role-based admin delegation
  - Usage dashboard
 
+## Project Front
+![Alt text](images/1.png)
+![Alt text](images/2.png)
+![Alt text](images/3.png)
 
-License
+## License
 MIT
